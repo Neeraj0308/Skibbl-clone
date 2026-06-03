@@ -146,40 +146,6 @@ docker-compose up --build
 Frontend → `http://localhost:5173`  
 Backend → `http://localhost:3001`
 
----
-
-## 🌐 Deployment
-
-### Render (recommended — WebSocket support)
-
-1. Push to GitHub
-2. Create a new **Web Service** for backend:
-   - Root: `backend/`
-   - Build: `npm install`
-   - Start: `node src/index.js`
-   - Add env vars: `MONGODB_URI`, `FRONTEND_URL`, `PORT=3001`
-3. Create a new **Static Site** for frontend:
-   - Root: `frontend/`
-   - Build: `npm install && npm run build`
-   - Publish: `dist`
-   - Add env var: `VITE_BACKEND_URL=<backend-url>`
-4. Update `FRONTEND_URL` in backend with the frontend URL
-5. Update the live URL in this README
-
-Or use the `render.yaml` Blueprint for one-click deploy.
-
-### Railway
-
-```bash
-railway login
-railway init
-railway up
-```
-
-Set env vars in the Railway dashboard.
-
----
-
 ## 🔌 WebSocket Events
 
 ### Room & Lobby
