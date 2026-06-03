@@ -1,0 +1,80 @@
+.round-end-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  padding: 20px;
+}
+
+.round-end-card {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  padding: 28px 24px;
+}
+
+.re-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 4px;
+  color: var(--warning);
+}
+
+.re-next {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.re-scores-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.re-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.re-score-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--bg-surface);
+  border-radius: 8px;
+}
+
+.re-rank {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-dim);
+  width: 24px;
+}
+
+.re-pname {
+  flex: 1;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+}
+
+.re-pts {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary-light);
+}
+
+.re-guessed {
+  font-size: 11px;
+  color: var(--success);
+  font-weight: 700;
+}

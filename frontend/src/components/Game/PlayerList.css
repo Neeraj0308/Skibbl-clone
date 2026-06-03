@@ -1,0 +1,128 @@
+.player-list-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+}
+
+.pl-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  flex-shrink: 0;
+}
+
+.pl-count {
+  background: var(--primary);
+  color: white;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.pl-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px;
+}
+
+.pl-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  animation: fadeIn 0.3s ease;
+}
+
+.pl-item.me {
+  background: rgba(108, 99, 255, 0.08);
+  border-color: rgba(108, 99, 255, 0.2);
+}
+
+.pl-item.drawing {
+  background: rgba(255, 209, 102, 0.08);
+  border-color: rgba(255, 209, 102, 0.3);
+}
+
+.pl-item.guessed {
+  background: rgba(67, 233, 123, 0.06);
+  border-color: rgba(67, 233, 123, 0.2);
+}
+
+.pl-item.disconnected {
+  opacity: 0.4;
+}
+
+.pl-rank {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-dim);
+  width: 20px;
+  text-align: center;
+}
+
+.pl-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.pl-info { flex: 1; min-width: 0; }
+
+.pl-name-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pl-name {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pl-you {
+  font-size: 10px;
+  background: rgba(108, 99, 255, 0.2);
+  color: var(--primary-light);
+  padding: 1px 5px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.pl-host { font-size: 12px; }
+
+.pl-score {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.pl-status { flex-shrink: 0; font-size: 14px; }
+.status-drawing { color: var(--warning); }
+.status-guessed { color: var(--success); font-weight: 800; font-size: 16px; }
+.status-dc { color: var(--error); }

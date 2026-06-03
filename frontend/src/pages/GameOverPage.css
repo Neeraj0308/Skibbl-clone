@@ -1,0 +1,178 @@
+.game-over-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, rgba(108, 99, 255, 0.12) 0%, transparent 70%);
+}
+
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  animation: confetti 3s ease-in forwards;
+}
+
+.go-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.winner-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.trophy-icon {
+  font-size: 72px;
+  animation: bounce 1.5s ease infinite;
+}
+
+.go-title {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.go-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.winner-celebration {
+  font-size: 32px;
+  animation: bounce 1s ease infinite;
+  margin-top: 4px;
+}
+
+/* Podium */
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+}
+
+.podium-place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 0;
+  min-width: 100px;
+  gap: 4px;
+}
+
+.rank-1 { background: linear-gradient(to top, rgba(255, 209, 102, 0.2), rgba(255, 209, 102, 0.05)); border: 1px solid rgba(255,209,102,0.3); }
+.rank-2 { background: linear-gradient(to top, rgba(173, 181, 189, 0.15), transparent); border: 1px solid rgba(173,181,189,0.2); }
+.rank-3 { background: linear-gradient(to top, rgba(231, 111, 81, 0.15), transparent); border: 1px solid rgba(231,111,81,0.2); }
+
+.podium-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+}
+
+.podium-medal { font-size: 20px; }
+.podium-name { font-size: 13px; font-weight: 700; text-align: center; }
+.podium-pts { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+/* Leaderboard */
+.lb-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lb-list { display: flex; flex-direction: column; gap: 8px; }
+
+.lb-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  animation: fadeIn 0.3s ease;
+  transition: all 0.2s;
+}
+
+.lb-row.me {
+  background: rgba(108, 99, 255, 0.08);
+  border-color: rgba(108, 99, 255, 0.25);
+}
+
+.lb-row.winner {
+  background: rgba(255, 209, 102, 0.06);
+  border-color: rgba(255, 209, 102, 0.25);
+}
+
+.lb-rank { font-size: 18px; width: 32px; text-align: center; }
+.lb-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+.lb-name {
+  flex: 1;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lb-you {
+  font-size: 10px;
+  background: rgba(108, 99, 255, 0.2);
+  color: var(--primary-light);
+  padding: 1px 5px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.lb-score {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-light);
+}
+
+.go-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
