@@ -2,8 +2,6 @@
 
 A full-stack real-time multiplayer drawing and guessing game — a clone of [skribbl.io](https://skribbl.io).
 
-> **Live URL:** `https://your-skribbl-clone.onrender.com` ← update after deployment
-
 ---
 
 ## ✨ Features
